@@ -2,4 +2,4 @@
 ## 합집합
 ## 교집합 - 교차타입
 
-![교집합](/public/Intersection-%20교차타입.jpg)
+![Intersection- 교차타입](https://github.com/user-attachments/assets/1851dc66-ae05-49f7-9d7f-74d2e7319f4c)
