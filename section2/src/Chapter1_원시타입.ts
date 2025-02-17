@@ -34,7 +34,7 @@ let unde1: undefined = undefined;
  * strictNullChecks값을 false로
  */
 
-// 리터럴 타입
+// 리터럴 타입 => 값 그 자체가 타입
 // 리터럴 -> 값
 let numA: 10 = 10;
 
