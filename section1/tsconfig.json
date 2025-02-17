@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "outDir": "dist",
-    "strict": false,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
+    "target": "ESNext", // 최신 ECMAScript 버전 사용
+    "module": "ESNext", // ES 모듈 시스템 사용
+    "outDir": "dist", // 컴파일된 JS 파일이 생성될 디렉터리
+    "strict": false, // 엄격한 타입 검사 비활성화
+    "moduleDetection": "force", // 모듈 시스템 강제 적용 (ESM 우선)
+    "skipLibCheck": true // 라이브러리 타입 체크 생략 (컴파일 속도 향상)
   },
-  "include": ["src"]
-  
+  "ts-node": { "esm": true }, // 더 이상 필요 없음, package.json에서 "type": "module" 설정
+  "include": ["src"] // 컴파일 대상 파일 경로
 }
