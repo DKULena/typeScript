@@ -39,7 +39,8 @@ type Info = never;
 </a>
 </p>
 
-## Quiz 1. Ans)
+
+# <b><span style="color:red;">Quiz 1. Ans)</span></b>
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 - Nums -> 넘버 배열
@@ -80,7 +81,7 @@ type Course = never;
 </a>
 </p>
 
-## Quiz 2. Ans)
+# <b><span style="color:red;">Quiz 2. Ans)</span></b>
 ![alt text](image-3.png)
 ![alt text](image-4.png)
 - Type Alias
@@ -113,7 +114,7 @@ type User = never;
 </a>
 </p>
 
-## Quiz 3. Ans)
+# <b><span style="color:red;">Quiz 3. Ans)</span></b>
 ![alt text](image-5.png)
 ![alt text](image-6.png)
 
