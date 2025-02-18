@@ -48,6 +48,13 @@ type Info = never;
 - Coords -> 튜플(타입, 길이 고정)
 - Info -> 튜플(타입, 길이 고정), 문자열 숫자 위치가 바뀌어야 할 것 같습니다.
 
+```
+type Nums = number[];
+type Colors = Array<string>;
+type Coords = [number, number];
+type Info = [string, number];
+```
+
 
 ### Quiz 2.
 
@@ -85,6 +92,15 @@ type Course = never;
 ![alt text](image-3.png)
 ![alt text](image-4.png)
 - Type Alias
+```
+type Course = {
+  name: string,
+  price: number,
+  student_cnt: number,
+  author: string,
+  related_courses: string[]
+};
+```
 ### Quiz 3.
 
 ---
@@ -119,3 +135,11 @@ type User = never;
 ![alt text](image-6.png)
 
 - name과 email은 필수, extra1&2는 옵셔널이라고 생각하여 옵셔널 프로퍼티로 지정했습니다.
+```
+type User = {
+  name: string,
+  email: string,
+  extra1 ?: string,
+  extra2 ?: string,
+};
+```
