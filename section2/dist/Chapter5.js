@@ -42,4 +42,10 @@ export {};
  * TypeScript에 타입 관련된 코드들은 컴파일 시에 다 사라진다매여??
  *
  * 응~ Enum은 아니야~
+ * (function (Role) {
+    Role[Role["ADMIN"] = 0] = "ADMIN";
+    Role[Role["USER"] = 1] = "USER";
+    Role[Role["GUEST"] = 2] = "GUEST";
+    })(Role || (Role = {}));
+    와 같이 자바스크립트 객체로 변환되어 실행
  */ 

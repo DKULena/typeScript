@@ -62,7 +62,7 @@ type CountryNumberCodes = {
     [key: string] : number
 }
 
-let CountryNumberCodes: CountryNumberCodes = {
+let countryNumberCodes: CountryNumberCodes = {
     Korea: 410,
     UnitedState: 840,
     UnitedKingdom: 826,
@@ -76,3 +76,8 @@ type CountryNumberCodes2 = {
 
 let CountryNumberCodes2: CountryNumberCodes2 = {}
 // 객체 내부에 값이 없어도 오류가 발생하지 않음 -> 규칙을 위반( [key: string] : number) 하지만 않으면 상관 없음
+
+type CountryNumberCodes3 = {
+    [key: string] : number,
+    Korea: number,
+}
