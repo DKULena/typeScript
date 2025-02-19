@@ -47,4 +47,14 @@ login({
     name: "이정환",
     kickCount: 10
 });
+login({
+    tag: "MEMBER",
+    name: "멤버",
+    point: 1000
+});
+login({
+    tag: "GUEST",
+    name: "게스트",
+    visitCount: 3
+});
 export {};
