@@ -77,4 +77,4 @@ let intersection1: Intersection = {
     color: "",
     language: ""
 }
-// 전부 포함
+// 전부 포함 경우 하나만

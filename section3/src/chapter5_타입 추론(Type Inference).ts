@@ -26,7 +26,7 @@ function func(message= "hello") {
     return "hello";
 }
 
-// 2. any타입 진화(암묵적 any 타입)
+// 2. any타입 진화(암묵적 any 타입) / 명시적 any타입 (a:any)와는 다름
 let d; // any
 d = 10;
 d.toFixed(); // number로 타입 추론
@@ -37,8 +37,12 @@ d // string
 d.toUpperCase();
 // d.toFixed() // 'toFixed' 속성이 'string'형식에 없습니다.
 
-// 3. const
-const num = 10; // number literal : 10
+// 3. const (타입 리터럴)
+const num = 10; // number literal : 10 -> const 상수이기 때문
 const str = "hello" // string literal :"hello"
 
-let arr = [1, "string"] // 유니온 타입 (number | string)
+const arr = [1, "string"] // 유니온 타입 (number | string)
+arr
+
+
+const e = [1, 2, 3] as const;
