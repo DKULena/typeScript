@@ -98,3 +98,70 @@ login({
     name: "게스트",
     visitCount: 3
 });
+
+/**
+ * 복습 겸 한 가지 더 사례
+ * 비동기 작업의 결과를 처리하는 객체
+ */
+
+type LoadingTask = {
+  state: "LOADING";
+};
+
+type FailedTask = {
+  state: "FAILED";
+  error: {
+      message: string;
+  };
+};
+
+type SuccessTask = {
+  state: "SUCCESS";
+  response: {
+      data: string;
+  };
+};
+
+type AsyncTask = LoadingTask | FailedTask | SuccessTask;
+
+// type AsyncTask = {
+//   state: "LOADING" | "FAILED" | "SUCCESS"; // 문자열 리터럴
+//   error?: {
+//     message: string;
+//   };
+//   response?: {
+//     data: string;
+//   };
+// };
+
+const processResult = (task: AsyncTask) => {
+switch (task.state) {
+  case "LOADING":
+    console.log("로딩중");
+    break;
+  case "FAILED":
+    console.log(`에러 발생: ${task.error.message}`);
+    break;
+  case "SUCCESS":
+    console.log(`성공: ${task.response.data}`);
+    break;
+}
+};
+
+const loading: AsyncTask = {
+state: "LOADING",
+};
+
+const failed: AsyncTask = {
+state: "FAILED",
+error: {
+  message: "요류 발생 원인은 ~~",
+},
+};
+
+const success: AsyncTask = {
+state: "SUCCESS",
+response: {
+  data: "데이터 ~~",
+},
+};

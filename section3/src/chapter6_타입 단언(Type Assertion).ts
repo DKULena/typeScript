@@ -1,6 +1,6 @@
 /**
  * 타입 단언(Type Assertion)
- * 값을 타입으로 바꾸는 것이 아닌 눈을 잠깐 가리는 것
+ * 값을 타입으로 바꾸는 것이 아닌 눈을 잠깐 가리는 것 (업 캐스팅, 다운 캐스팅 X)
  */
 
 type Person = {
@@ -9,6 +9,7 @@ type Person = {
 }
 
 let person = {} as Person // Person 으로 단언 <- 타입 단언 person as Person
+// 빈 객체에서는 person: Person으로 타입 정의를 할 수 없음 -> 너 name, age 프로퍼티 없잖아
 
 person.name = "이정환"
 person.age = 27;
@@ -23,6 +24,7 @@ let dog = {
     color: "brown",
     breed: "진도"
 } as Dog;
+// dog: Dog라고 정의하면, 초과 프로퍼티 breed는 허용하지 않음
 
 /**
  * 타입 단언의 규칙
@@ -32,8 +34,8 @@ let dog = {
  * A가 B의 서브타입이어야 함
  */
 
-let num1 = 10 as never;
-let num2 = 10 as unknown;
+let num1 = 10 as never; // 10이 never에 서브타입이기 때문
+let num2 = 10 as unknown;  // 10이 unknown에 슈펴타입이기 때문
 
 // let num3 = 10 as string
 /* 'number' 형식을 'string'형식으로 변환한 작업은 실수일 수 있습니다.
