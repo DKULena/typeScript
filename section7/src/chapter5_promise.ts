@@ -41,8 +41,8 @@ const fetchPost = (): Promise<Post> => {
   });
 };
 
-const postRequests = fetchPost();
+// const postRequests = fetchPost();
 
-postRequests.then((post) => {
-  post.id;
-});
+// postRequests.then((post) => {
+//   post.id;
+// });
