@@ -38,18 +38,23 @@
 // let a = getLastValue([1, 2, 3, 4, true]);
 // console.log(a)
 
-function returnLastValue<T>(data: [...unknown[], T]) {
+// function returnLastValue<T>(data: [...unknown[], T]) {
+//     return data[data.length - 1] as T;
+// }
+
+// const returnLastValueArrow = <T>(data: [...unknown[], T]) => data[data.length - 1] as T;
+
+// let num = returnLastValue([0, 1, 2]);
+// // 0
+// console.log(num)
+
+// let str = returnLastValue(["hello", "mynameis"])
+// // "hello"
+// console.log(str)
+
+// let union = returnLastValueArrow([1, "hello", "mynameis"])
+
+function getLastValue<T>(data: [...unknown[], T]) {
     return data[data.length - 1] as T;
 }
-
-const returnLastValueArrow = <T>(data: [...unknown[], T]) => data[data.length - 1] as T;
-
-let num = returnLastValue([0, 1, 2]);
-// 0
-console.log(num)
-
-let str = returnLastValue(["hello", "mynameis"])
-// "hello"
-console.log(str)
-
-let union = returnLastValueArrow([1, "hello", "mynameis"])
+  
